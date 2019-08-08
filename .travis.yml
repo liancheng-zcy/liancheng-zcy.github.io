@@ -1,3 +1,0 @@
-language: javascript
-script: ./build-prod.sh
-sudo: required
