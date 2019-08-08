@@ -11,7 +11,7 @@ paginate: 5
 paginate_path: "page:num"
 # Build settings
 markdown: kramdown
-highlighter: pygments
+rouge: pygments
 sass:
   sass_dir: _sass
   style: :compressed
