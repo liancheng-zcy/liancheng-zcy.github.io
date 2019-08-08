@@ -1,23 +1,33 @@
-name: Liancheng
-description:  Liancheng #Jekyll theme
-
+# Site settings
+## Change the values as needed.
+title: Liancheng Enjoy
+email: lianchenglac@163.com
+description: "A jekyll theme implementing material design by using muicss."
+keywords: "jekyll, theme, material, muicss"
+#url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
+#url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+paginate: 5
+paginate_path: "page:num"
+# Build settings
+markdown: kramdown
+highlighter: pygments
 sass:
-  sass_dir: assets/css/_sass
+  sass_dir: _sass
   style: :compressed
+links:
+  facebook: liancheng
+  twitter: liancheng
+  email: lianchenglac@163.com
+  github: liancheng-zcy.github.io
+exclude:
+  - bower_components
+  - README.md
+full_name: Brijesh
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+##set this to enable disqus commenting
+disqus: bitwiser
 
-#url: https://thesowah.github.io/wangana
-permalink: /:year/:month/:title/
-owner:
-    name: #
-    twitter: #
-    github: #
-    disqus_shortname: #
-
-ga_id: #
-ga_username: #
-
-timezone: Africa/Accra
+##set this to enable google analytics
+#ga_id: analyticsID
+#ga_domain: bitwiser.in
