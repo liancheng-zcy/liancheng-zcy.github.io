@@ -1,100 +1,23 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+name: Wangana
+description:  Jekyll theme
 
-# Site settings
-react:
-  title: Material Bliss
-  name: Andrew Plaza
-  menu_right_subtitle: Blogger || Computer Scientist
-  avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-  logo: static/img/logo_theme.jpg
-  email: aplaza@liquidthink.net
-  description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
-  baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://test_domain.com:4000" # the base hostname & protocol for your site
-  permalink: /posts/:title
-  social:
-    twitter: http://twitter.com/liquid_think
-    github: http://github.com/InsidiousMind
-    facebook: http://facebook.com/liquidthinknet
-    code: http://livecoding.tv/insidious #livecoding.tv handle
-    google-plus: http://plus.google.com/+LiquidthinkNet #make sure to include the '+'
-    rss: feed.xml
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
 
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
+url: https://thesowah.github.io/wangana
+permalink: /:year/:month/:title/
+owner:
+    name: #
+    twitter: #
+    github: #
+    disqus_shortname: #
 
-title: Material Bliss
-name: Andrew Plaza
-menu_right_subtitle: Blogger || Computer Scientist
-avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-logo: static/img/logo.png
-email: aplaza@liquidthink.net
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://test_domain.com:4000" # the base hostname & protocol for your site
-permalink: /posts/:title
+ga_id: #
+ga_username: #
 
-twitter_username: liquid_think
-github_username: InsidiousMind
-
-
-# Build settings
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-source: src
-destination: public
-
-assets:
-  compress:
-    css: sass
-    js: false
-
-  autowrite: true
-  cache: .asset-cache
-  cache_type: filesystem
-  cdn: www.example.com
-  skip_baseurl_with_cdn: false
-  skip_prefix_with_cdn: false
-  prefix: "/assets"
-  digest: true
-
-  assets:
-    - "*.png"
-    - "bundle.css"
-    - "bundle.js.map"
-    - "*.svg"
-    - "*.eof"
-    - "*.ttf"
-
-  sources:
-    - src/_assets/css
-    - src/_assets/fonts
-    - src/_assets/img
-    - src/_assets/projects
-
-  features:
-    liquid: false
-    integrity: true
-    automatic_img_size: true
-    automatic_img_alt : true
-
-exclude: ['node_modules', 'Gemfile', '.asset-cache', 'build-prod.sh', 'build-dev.sh']
-
-gems:
-  - jekyll-assets
-  - jekyll_pages_api
-  - jekyll-react
+timezone: Africa/Accra
