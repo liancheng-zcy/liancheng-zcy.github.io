@@ -1,9 +1,9 @@
 # Site settings
 ## Change the values as needed.
-title: Liancheng Enjoy
+title: The small home that Li Ancheng
 email: lianchenglac@163.com
-description: "A jekyll theme implementing material design by using muicss."
-keywords: "jekyll, theme, material, muicss"
+description: "Only the code can be aroused my interest to do the real geek!!"
+keywords: "jekyll, github, html, js,vue,node"
 #url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
 #url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -19,7 +19,7 @@ links:
   facebook: liancheng
   twitter: liancheng
   email: lianchenglac@163.com
-  github: liancheng-zcy.github.io
+  github: https://github.com/liancheng-zcy/liancheng-zcy.github.io
 exclude:
   - bower_components
   - README.md
