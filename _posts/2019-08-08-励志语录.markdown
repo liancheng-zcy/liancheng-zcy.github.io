@@ -2,7 +2,7 @@
 layout: post
 color: red
 cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
-title:  "Welcome to Jekyll!"
+title:  "励志语录!"
 date:   2019-08-08 19:55:39
 categories: jekyll update
 ---
