@@ -1,21 +1,5 @@
 > 
----
 
-layout: post
-
-color: deep-purple
-
-cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
-
-title: "js函数初探!"
-
-date: 2019-08-08 08:50:39
-
-categories: liancheng update
-
-
-
----
 ## js函数初探
 **函数总结：**
 
