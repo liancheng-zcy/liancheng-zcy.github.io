@@ -16,10 +16,10 @@ sass:
   sass_dir: _sass
   style: :compressed
 links:
-  weibo: https://weibo.com/u/6032496028
+  weibo: u/6032496028
   twitter: liancheng
   email: lianchenglac@163.com
-  github: https://github.com/liancheng-zcy/liancheng-zcy.github.io
+  github: liancheng-zcy.github.io
 exclude:
   - bower_components
   - README.md
