@@ -16,14 +16,14 @@ sass:
   sass_dir: _sass
   style: :compressed
 links:
-  facebook: liancheng123
-  twitter: liancheng123
+  facebook: liancheng
+  twitter: liancheng
   email: lianchenglac@163.com
   github: https://github.com/liancheng-zcy/liancheng-zcy.github.io
 exclude:
   - bower_components
   - README.md
-full_name: Brijesh
+full_name: LiAncheng
 
 ##set this to enable disqus commenting
 disqus: bitwiser
