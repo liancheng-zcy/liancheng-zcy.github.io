@@ -16,7 +16,7 @@ sass:
   sass_dir: _sass
   style: :compressed
 links:
-  facebook: liancheng
+  weibo: https://weibo.com/6032496028/profile?rightmod=1&wvr=6&mod=personinfo
   twitter: liancheng
   email: lianchenglac@163.com
   github: https://github.com/liancheng-zcy/liancheng-zcy.github.io
