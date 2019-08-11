@@ -5,7 +5,7 @@ color: red
 title:  "励志语录!"
 date:   2019-08-08 19:55:39
 tags: 励志
-categories: jekyll update
+categories: LiAncheng update
 ---
 十、不能活在他人的话下，不能活在别人的鄙视里，而是把命运掌握于自己的手中。踏实做事，少说废话，规划明天，安稳睡觉。把时间用于进步上，而不是埋怨中。
 
