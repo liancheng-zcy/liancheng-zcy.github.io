@@ -1,0 +1,136 @@
+---
+layout: post
+color: yellow
+# cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
+title:  "作用域与作用域初探!"
+tags: js,String,arr
+notebook: （js）
+date:   2019-08-11 
+categories: LiAncheng update
+---
+## js字符串方法和js数组方法
+### 字符串
+
+**铺垫**：
+```
+var str = 'hello world';
+console.log(str[1]);//可以直接获取字符串指定位置字符，不建议使用，耗内存。
+console.log(str.charAt(1))//e 推荐使用
+console.log(str.charAt(str.length-1));// 可以找到字符串的最后一位字符（通用）
+```
+**1、第一组substring slice substr(字符串的截取操作)**  
+（1）substring：两个参数，第一个参数代表开始位置，第二个参数代表结束位置（不包括结束位置）。
+（2）slice:两个参数，第一个参数代表开始位置，第二个参数代表结束位置（不包括结束位置）。  
+**区别**：  
+substring会自动调整两个参数的顺序，但是不能是负数，可以只写一个参数，第一个参数是起始位置，结束位置是默认到结束。  
+slice起始位置一定小于结束位置，支持负数，从字符串末尾向前截取，**-1**表示最后一位。
+```
+var str = 'hello world';
+console.log( str.slice(-4,-1) ); //orl
+//这里解释一下：-1代表最后一位（从后往前数），但是截取时，还是包含第一个参数位，不包含第二个参数位
+```
+（3）substr:两个参数，第一个表示开始位置，第二个参数表示截取长度。  
+**2、第二组indexOf、lastIndexOf（得到对应字符所在的位置）**  
+（1）indexOf：从左向右进行查找，第一个满足条件的，第二个参数：查找的起始位置，默认就是从0位置查找  
+（2）lastIndexOf：从右向左进行查找 , 第二个参数，指定字符串的起始位置。  
+**找不到指定字符，就会返回 -1 。 查找整体的时候，看第一个字符的位置**  
+**includes()：Es6新方法，返回布尔值**  
+**3、第三组toUpperCase()、toLowerCase() 、trim()**
+```
+ var str = '    He    llo     ';
+console.log( str.toUpperCase() );  //全部转大写
+console.log( str.toLowerCase() );    //全部转小写
+console.log( '('+ str.trim() +')' );   //去掉字符串前后空格的
+```
+### 数组
+**1、两种创建方式**
+```
+var arr = [];//字面量创建方式，推荐使用
+var arr = new Array('a','b','c','d');//面象对象创建方式
+```
+区别：var arr = new Array(3),里面只有一个数字时代表长度为三的数组，而var arr = [3]，代表有一位元素3。  
+**插播重点**：
+```
+ var arr = [3];
+ arr.length = 5;
+ console.log( arr.length );//5
+ var str = 'a';
+  str.length = 5;   //字符串不能改变长度，但是数组可以改变长度
+ console.log( str.length );//1
+```
+1、数组遍历和多维数组遍历  
+```
+    var arr = ['a','b','c','d'];
+    for(var i=0;i<arr.length;i++){
+        console.log( arr[i] );
+    } 
+
+    多维数组
+    var arr = [
+        ['a','b'],
+        ['c','d']
+    ];
+    //console.log( arr[1][0] );
+    for(var i=0;i<arr.length;i++){
+        for(var j=0;j<arr[i].length;j++){
+            console.log( arr[i][j] );
+        }
+    }
+```
+**数组方法**
+1、第一组**push**、pop、**unshift**、shift   
+**重点**：   
+pop()、shift()：执行完的结果是数组被删除的那一项  
+push()、unshift()：执行完的结果是当前数组的长度  
+（1）pop():删除数组的最后一项。  
+（2）shift():删除数组的起始项。  
+（3）push():往数组的后面添加新的子项。  
+（4）unshift():往数组前面添加新的子项。  
+## 数组和字符串相似对比
+1、第一组join、split
+（1）join:数组的方法：把数组链接成一个字符串.  
+**重点**：括号里的参数是你拼接数组的符号，不写默认为,号。
+```
+var arr = [1,2,3,4];
+var str = arr.join('+');
+console.log(str);//'1+2+3+4'
+```
+（2）split:字符串的方法  把字符串切分成一个数组集合。
+```
+var str = '1+2+3+4';
+var arr = str.split('+');
+console.log( arr );   // ["1", "2", "3", "4"]
+```
+**重点**：括号里的参数是你切割成数组的符号，写没有的字符串是直接打印原字符串。  
+**经典例题**
+```
+    function foo(str){
+    var arr = str.split('-'); 
+    for(var i=1;i<arr.length;i++){
+    arr[i] = arr[i].substring(0,1).toUpperCase() + arr[i].substring(1);
+    }
+
+    return arr.join('');
+    }   
+    console.log( foo('border-width-left') );
+```
+2、concat : 连接多个数组
+```
+    var a = [1,2,3];
+    var b = [4,5,6];
+    var c = a.concat(b , b , b);//1 2 3 4 5 6 4 5 6 4 5 6  
+    console.log( c ); 
+```
+3、indexOf、lastIndexOf（用法同字符串）  
+4、slice(字符串也有)： 第一个参数是起始位置，第二个参数结束位置（不包含结束位置）
+
+```
+var arr = ['red','yellow','blue','yellow'];
+console.log( arr.slice(1,2) );  //  ["yellow"]
+```
+
+**小结**  
+join、concat、slice + （map、filter ...） : 不能修改原数组  
+push、pop、unshift、shift + ( splice、reverse、sort ) : 能修改原数组
+
+### 继续增加！！！！
