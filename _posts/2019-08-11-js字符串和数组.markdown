@@ -2,7 +2,7 @@
 layout: post
 color: yellow
 # cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
-title:  "作用域与作用域初探!"
+title:  "js字符串和数组!"
 tags: js,String,arr
 notebook: （js）
 date:   2019-08-11 
