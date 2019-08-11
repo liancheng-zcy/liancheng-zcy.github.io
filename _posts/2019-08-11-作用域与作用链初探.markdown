@@ -3,7 +3,7 @@ layout: post
 color: red
 # cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
 title:  "作用域与作用域初探!"
-tags: 标签（js,前端）
+tags: js,前端
 notebook: （js）
 date:   2019-08-11 
 categories: LiAncheng update
