@@ -3,15 +3,18 @@ layout: post
 color: red
 # cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
 title:  "作用域与作用域初探!"
+tags: 标签（js,前端）
+notebook: （js）
 date:   2019-08-11 
 categories: LiAncheng update
 ---
 ## 函数作用域和变量作用
 
-1、函数作用域的特点，可以调用到外面的函数；但是调用不到里面的函数。
+1、函数作用域的特点，可以调用到外面的函数；但是调用不到里面的函数。  
 2、变量作用域的特点：可以调用到外面的全局变量，但是调用不到里面的变量。
 
-`
+
+```
     function test(){
         return  10;
     }
@@ -23,10 +26,10 @@ categories: LiAncheng update
      foo();
      console.log(foo()) ;//没有return返回的是undefined，直接打印函数返回的是undefind和函数执行的结果。 
 
-`
+```
 ---
 
-`
+```
     function foo(){
     console.log('foo');
     function baz(){
@@ -36,9 +39,9 @@ categories: LiAncheng update
     }
     foo();
     baz(); //执行错误可以调到外面的函数，调不到里面的函数 
-`
+```
 ---
-`
+```
 
     function foo(){
         var b = 20;
@@ -49,9 +52,9 @@ categories: LiAncheng update
     foo();
     bar();  
 
-`
+```
 ---
-`
+```
     function foo(){
         var b = 20;
     }
@@ -71,12 +74,12 @@ categories: LiAncheng update
     }
     foo();
     bar();
-`
+```
 ---
 ### 作用域链：变量的查找顺序，就近原则，一层一层往外找
 
 1、变量从10开始依次往外找
-`
+```
     // var a = 5;
         function foo(){
         //    var a = 7;
@@ -87,9 +90,9 @@ categories: LiAncheng update
             bar();
         }
         foo();
-`
+```
 2、
-`
+```
 //重点
   var a = 10;
         function foo(){
@@ -104,9 +107,9 @@ categories: LiAncheng update
             a = 20;
         }
         foo(); 
-`
+```
 3、
-`
+```
 var a = 10;
         function foo(a){
             a += 5;
@@ -115,9 +118,9 @@ var a = 10;
         foo(a);
         console.log(a); //10
 
-`
+```
 4、
-`
+```
 var a = 10;
         function foo(){
             var a = 20;
@@ -127,9 +130,9 @@ var a = 10;
             console.log(a);//10
         } 
         foo(); 
-`
-6、全局变量会一直被调用，而函数里的变量函数每次调用都会生成一个全新的变量。
-`
+```
+5、全局变量会一直被调用，而函数里的变量函数每次调用都会生成一个全新的变量。
+```
    var a = 10;
         function foo(){
             a++;
@@ -150,5 +153,5 @@ var a = 10;
         foo();//11
         foo();//11
         foo();//11
-`
+```
 ### 继续增加！！！！
