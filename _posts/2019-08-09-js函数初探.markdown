@@ -1,9 +1,8 @@
 > 
-
 ## js函数初探
 ---
 函数总结：
-
+---
 1、函数申明具备预解析功能，函数会解析提升到scrupt前面。不管在哪函数执行都能执行。函数申明不能直接调用。
 ---
 2、函数表达式不具备预解析功能，执行语句只能写在函数后面。函数表达式可以直接调用。
@@ -15,5 +14,5 @@ return总结：
 2、return 类似于推出操作，所以return后面的代码是不执行的。
 ---
 [return 实现时间样式](https://github.com/liancheng-zcy/liancheng-zcy.github.io/blob/master/img/js-jsj.png)
-
+---
 
