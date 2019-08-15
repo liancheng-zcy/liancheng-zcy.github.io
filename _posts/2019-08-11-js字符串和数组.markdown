@@ -128,7 +128,28 @@ console.log( arr );   // ["1", "2", "3", "4"]
 var arr = ['red','yellow','blue','yellow'];
 console.log( arr.slice(1,2) );  //  ["yellow"]
 ```
-
+5、  splice:可以对数组进行添加、删除、替换。  
+第一个参数：开始位置，第二个参数：删除的个数，第三个参数往后：要添加的元素，添加到起始位置的前面。  
+（1）删除功能：  
+```
+var arr = [a,b,c,d,e];
+arr.splice(1,2);
+//[a,d,e]
+```
+（2）替换功能
+```
+var arr = [a,b,c,d,e];
+arr.splice(1,2,q,w,e,r);
+//[a,q,w,e,r,d,e];
+```
+（3）添加功能
+```
+var arr = [a,b,c,d,e];
+arr.splice(1,0,q,w,e,r);
+//[a,q,w,e,r,b,c,d,e];
+```
+(4)删除自身  
+splice(开始位置,1);  
 **小结**  
 join、concat、slice + （map、filter ...） : 不能修改原数组  
 push、pop、unshift、shift + ( splice、reverse、sort ) : 能修改原数组
