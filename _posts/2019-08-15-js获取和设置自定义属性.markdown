@@ -1,0 +1,36 @@
+---
+layout: post
+color: yellow
+# cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
+title:  "js获取自定义属性的两种方法"
+tags: js,自定义属性
+notebook: （js）
+date:   2019-08-15
+categories: LiAncheng update
+---
+## js获取自定义属性的两种方法
+
+一、四种获取属性的方法  
+首先获取一个元素：var elem = document.getElementById('elem');  
+```
+ <div id="elem" class="box" title="hello" ancheng="Ancheng" data-user="小明" data-user-name="小小明"></div>
+```
+1、点(获取不到自定义属性)：  
+
+2、[](获取不到自定义属性)也可以获取属性 ，有利于进行传参操作。   
+elem.style['background'] = 'yellow'  
+3、getAttribute():早期获取自定义属性的方法。  
+var foo = elem.getAttribute('ancheng');//Ancheng  
+同时也能进行设置：elem.setAttribute('ancheng','安成');  
+4、data-*(现在经常使用的获取自定义属性的方法)  
+console.log(elem.dataset.user);  
+**重点：** *号的名字若果有下划线，就转成小驼峰。  
+console.log(  elem.dataset.userName)  
+**注意：**可以在js中直接添加自定义属性，但是只能在js中用，因为你还没有加入html中。  
+```
+        elem.myColor = 'red';
+        console.log( elem.myColor );
+```
+
+
+### 继续增加！！！！
