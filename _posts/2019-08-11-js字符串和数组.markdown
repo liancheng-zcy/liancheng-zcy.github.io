@@ -151,7 +151,7 @@ arr.splice(1,0,q,w,e,r);
 (4)删除自身  
 splice(开始位置,1);  
 **小结**  
-join、concat、slice + （map、filter ...） : 不能修改原数组  
+join、concat、slice + （map、filter、every、some、toString、indeOf、lastIndexOf） : 不能修改原数组  
 push、pop、unshift、shift + ( splice、reverse、sort ) : 能修改原数组
 
 ### 继续增加！！！！
