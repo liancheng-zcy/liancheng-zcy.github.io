@@ -1,0 +1,79 @@
+---
+layout: post
+color: yellow
+# cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
+title:  "js布局转换!"
+tags: js,html,css
+notebook: （js）
+date:   2019-09-01 
+categories: LiAncheng update
+---
+**布局转换**
+  为什么需要布局转换，有时候单纯的写css代码，实现了基本的布局，但是你想要实现鼠标拖拽改变元素的位置，用margin，padding写的布局就难于实现改变位置的效果。
+  ```
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+      width: 330px;
+      height: 330px;
+      border: 1px black solid;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    ul li {
+      width: 100px;
+      height: 100px;
+      background: red;
+      margin: 5px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <script>
+    var lis = document.getElementsByTagName('li');
+    var result = [];
+    for (var i = 0; i < lis.length; i++) {
+      result.push({
+        x: lis[i].offsetLeft,
+        y: lis[i].offsetTop
+      });
+    }
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].style.position = 'absolute';
+      lis[i].style.left = result[i].x + 'px';
+      lis[i].style.top = result[i].y + 'px';
+      lis[i].style.margin = 0;//去掉margin值，他会影响left值和top值。
+    }
+  </script>
+</body>
+</html>
+
+  ```
+  效果图：  
+  ![avatar](https://i.loli.net/2019/09/01/lNFsPaQ4mfdizyU.png)
