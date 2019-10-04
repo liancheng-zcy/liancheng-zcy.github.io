@@ -1,6 +1,6 @@
 ---
 layout: post
-color: yellow
+color: brown
 # cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
 title:  "js布局转换!"
 tags: js,html,css
