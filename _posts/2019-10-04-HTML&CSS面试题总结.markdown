@@ -1,12 +1,12 @@
 ---
-layout:post
-color:pink
+layout: post
+color: pink
 # cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
-title:"HTML&CSS面试题总结"
-tags:js,html,css
-notebook:（js）
-date:2019-10-04
-categories:LiAncheng update
+title: "HTML&CSS面试题总结"
+tags: "js,html,css"
+notebook: （js）
+date: 2019-10-04
+categories: LiAncheng update
 ---
 ## HTML&CSS
 
