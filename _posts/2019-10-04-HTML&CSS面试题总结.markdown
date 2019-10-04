@@ -1,7 +1,7 @@
 ---
 layout: post
 color: pink
-# cover: "https://sm.ms/image/tulqxfmAdK7ygbk"
+cover: "https://sm.ms/image/tulqxfmAdK7ygbk"
 title: "HTML&CSS面试题总结"
 tags: "js,html,css"
 notebook: （js）
