@@ -1,0 +1,69 @@
+---
+layout: post
+color: pink
+# cover: "http://s3-ap-southeast-1.amazonaws.com/monster-machine/images/horssghonr-1436272011-Midas.jpg"
+title:  "原型对象和原型链"
+date:   2019-10-05 19:55:39
+tags: js 原型对象
+categories: LiAncheng update
+---
+### 原型对象和原型链
+
+**总的来说：**
+1、prototype是函数才有的属性 
+2、__proto__是每个对象都有的属性  
+（__proto__不是一个标准属性，只是部分浏览器实现了此属性，对应的标准属性是[[prototype]]）
+
+一、原型对象
+```
+function A(){//创建一个构造函数
+
+}
+
+A.prototype.testa = "aaaaa";
+let a1 = new A();
+let a2 = new A();
+let a3 = new A();
+
+console.log(a1.testa);
+console.log(a2.testa);
+console.log(a3.testa);
+//解释：通过实例对象来访问testa，a1、a2、a3都能访问到原型对象上的方法。
+（这就是为什么推崇原型下编程）。
+
+a1.testa = "bbbbb";
+//这时候单独把a1的testa属性改成“bbbbb”，这只是单纯的把a1自己属性改成“bbbbb”，原型下的属性是不会受到影响的。
+```
+
+二、原型链
+```
+[].toString();
+console.log(Array.prototype);//原型下有toString方法；
+
+//但是
+function A(){
+
+}
+var a = new A();
+console.log(a.toString);//也存在也能使用，但是
+console.log(a.prototype)下面没有toString方法，那他为什么能使用呢？
+//正是因为原型链的存在才能使用原型链上的toString方法。
+
+console.log(a.prototype.__proto__);//下面九就有toString方法；
+
+//强调（a.prototype）原型对象也是一个对象，所以往上找原型对象下的原型对象下就有能够使用的方法。
+
+a.prototype.__proto__ == Object.prototype 
+//解释：通俗来说a.prototype是Object的一个实例，也就是new 了一个Object。
+
+```
+
+原型链图解：
+构造函数的prototype == new出来的对象的__proto__。
+
+![image.png](https://i.loli.net/2019/10/05/t5Y6Joz7BP3vysV.png)
+
+草图：
+![image.png](https://i.loli.net/2019/10/05/tafYGCLZiU3Bx6u.png)
+
+##### 如有错误请指正......
