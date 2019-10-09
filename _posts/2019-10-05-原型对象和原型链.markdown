@@ -15,7 +15,8 @@ categories: LiAncheng update
 （__proto__不是一个标准属性，只是部分浏览器实现了此属性，对应的标准属性是[[prototype]]）
 
 一、原型对象
-```
+
+ ```javaScript
 function A(){//创建一个构造函数
 
 }
@@ -36,7 +37,8 @@ a1.testa = "bbbbb";
 ```
 
 二、原型链
-```
+
+```javaScript
 [].toString();
 console.log(Array.prototype);//原型下有toString方法；
 
