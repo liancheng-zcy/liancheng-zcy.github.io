@@ -43,4 +43,6 @@ layout: base
   {% if site.disqus %}
   <script src="/js/script.js"></script>
   {% endif %}
-
+  {% if site.intensedebate_comments %}
+  {% include intensedebate-comments.html %}
+  {% endif %}
