@@ -38,11 +38,13 @@ layout: base
     </footer>
     {% endif %}
     </div>
+    {% endif %}
+  {% if site.intensedebate_comments %}
+  {% include intensedebate-comments.html %}
+  {% endif %}
+
   </article>
 
   {% if site.disqus %}
   <script src="/js/script.js"></script>
-  {% endif %}
-  {% if site.intensedebate_comments %}
-  {% include intensedebate-comments.html %}
-  {% endif %}
+  
