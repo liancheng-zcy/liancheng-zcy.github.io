@@ -33,24 +33,26 @@ layout: base
       </div>
     {% if site.disqus %}
     <footer>
-      <p><a href="#" id="showComments"><i class="fa fa-comment-o"></i>Comments</a></p>
-      <div id="disqus_thread"></div>
+      <!-- <p><a href="#" id="showComments"><i class="fa fa-comment-o"></i>Comments</a></p>
+      <div id="disqus_thread"></div> -->
+      {% endif %}
+      {% if site.intensedebate_comments %}
+      {% include intensedebate-comments.html %}
+      {% endif %}
+      <script>
+        var idcomments_acct = '702287b2352d28360425e3131a76ce38';
+        var idcomments_post_id;
+        var idcomments_post_url;
+      </script>
     </footer>
     {% endif %}
     </div>
      
 
   </article>
-<div>李按成</div>
+
   {% if site.disqus %}
-  {% endif %}
-  {% if site.intensedebate_comments %}
-  {% include intensedebate-comments.html %}
-  {% endif %}
-  <script>
-    var idcomments_acct = '702287b2352d28360425e3131a76ce38';
-    var idcomments_post_id;
-    var idcomments_post_url;
-  </script>
+ 
+  
   <script src="/js/script.js"></script>
   
