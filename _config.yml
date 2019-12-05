@@ -27,6 +27,7 @@ full_name: LiAncheng
 
 ##set this to enable disqus commenting
 disqus: bitwiser
+intensedebate_comments: true
 
 ##set this to enable google analytics
 #ga_id: analyticsID
