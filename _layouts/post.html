@@ -33,8 +33,11 @@ layout: base
       </div>
     {% if site.disqus %}
     <footer>
-      <p><a href="#" id="showComments"><i class="fa fa-comment-o"></i>Comments</a></p>
-      <div id="disqus_thread"></div>
+      <!-- <p><a href="#" id="showComments"><i class="fa fa-comment-o"></i>Comments</a></p>
+      <div id="disqus_thread"></div> -->
+      {% if site.intensedebate_comments %}
+      {% include intensedebate-comments.html %}
+    {% endif %}
     </footer>
     {% endif %}
     </div>
