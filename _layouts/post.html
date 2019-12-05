@@ -45,13 +45,13 @@ layout: base
     {% endif %}
 
     </div>
-    {% endif %}
-    {% if site.intensedebate_comments %}
-    {% include intensedebate-comments.html %}
-    {% endif %}
+    
   </article>
   {% if site.disqus %}
- 
+  {% endif %}
+  {% if site.intensedebate_comments %}
+  {% include intensedebate-comments.html %}
+  {% endif %}
   
   <script src="/js/script.js"></script>
   
