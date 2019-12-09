@@ -1,0 +1,56 @@
+---
+layout: post
+color: brown
+cover: "../img/bg1.png"
+title:  "移动端一像素边框线原理"
+tags: js,html,css,M站
+notebook: （js）
+date:   2019-10-04 
+categories: LiAncheng update
+---
+**M站项目笔记上**
+ 
+ DPR：device pixel radio  
+
+在PC端测试dpr:windows.devicePixelRatio
+在移动端里px，是相对单位。
+
+  一个物理像素点等于一个css的一个逻辑像素点（dpr为1，就用一个物理点绘制这个像素点，dpr为2，就用4个物理点来绘制这个物理点。）
+
+ retina屏（视网膜显示屏）
+ 解释：是把更多的像素点压缩至一块屏幕里，从而达到更高的分辨率并提高屏幕显示的细腻程度，起初有摩托罗拉公司开发，后苹果公司给出标准的定义。
+
+ 实例：一像素边框的问题：
+ ```
+ .qt-bl-x1 {
+           position: relative;
+           &::after{//自己动手实现yo框架的写法
+             position: absolute;
+             top:0;
+             left:0;
+             content: "";
+             border-left:1px solid #ccc; 
+             transform-origin: 0 0;//改变中心点成为左上角
+             @media screen and (max--moz-device-pixel-ratio: 1.49),
+             (-webkit-max-device-pixel-ratio: 1.49),
+             (max-device-pixel-ratio: 1.49),
+             (max-resolution: 143dpi),
+             (max-resolution: 1.49dppx){
+               width: 100%;
+               height: 100%;
+             }
+             @media not all, (-webkit-max-device-pixel-ratio: 2.49) and (-webkit-min-device-pixel-ratio: 1.5), not all, (max-resolution: 239dpi) and (min-resolution: 144dpi), (max-resolution: 2.49dppx) and (min-resolution: 1.5dppx){
+               width: 200%;
+               height: 200%;
+               transform: scale(0.5);//等比缩小成原来的倍数
+             }
+             @media not all, (-webkit-min-device-pixel-ratio: 2.5), not all, (min-resolution: 240dpi), (min-resolution: 2.5dppx){
+               width: 300%;
+               height: 300%;
+               transform: scale(0.3333);//等比缩小成原来的倍数
+             }
+          }
+        }
+
+ ```
+  
