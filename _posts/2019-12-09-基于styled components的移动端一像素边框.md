@@ -11,12 +11,12 @@ categories: LiAncheng update
 
 ## 基于styled components的移动端一像素边框  
 
-> 1、首先你得知道怎么使用styled components增强组件，也就是继承样式。
+#### 1、首先你得知道怎么使用styled components增强组件，也就是继承样式。
 
 
 ![image.png](https://i.loli.net/2019/12/09/elcEFUakDHiAv8O.png)
 
-> 2、铺垫（使用styled增强组件）  
+#### 2、铺垫（使用styled增强组件）  
 
 
 - 在一个search.jsx组件里  
@@ -25,7 +25,7 @@ categories: LiAncheng update
 
   ![image.png](https://i.loli.net/2019/12/09/4U8JKARIPrSiBMy.png)
 
-> 3、上面的铺垫里我们使用了styled的高阶组件增强组件实现传参实现增强。但是这样以后每次使用一像素边框线，都需要写整套的一像素边框线的代码。
+#### 3、上面的铺垫里我们使用了styled的高阶组件增强组件实现传参实现增强。但是这样以后每次使用一像素边框线，都需要写整套的一像素边框线的代码。
 
 所以我们需要编写一个通用的高阶组件，包裹styled的高阶组件，生成一个拥有一像素边框线的组件。
 
