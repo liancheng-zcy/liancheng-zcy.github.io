@@ -1,0 +1,36 @@
+---
+layout: post
+color: purple
+title:  "快速构建TS环境"
+date:   2020-02-16 01:54:00
+---
+
+### 快速构建TS环境。
+
+#### 1、首先在全局安装node.js
+#### 2、在全局安装TS
+```
+  npm install -g typescript
+```
+#### 3、在VSCODE编辑器中新建TS文件夹
+- 创建src根目录
+- 创建app.ts
+- 编写你的TS代码  
+  
+（1）通过命令行运行TS文件
+```
+tsc ./src/app.ts --outFile ./dist/app.js
+tsc ./src/* --outDir ./dist --watch
+```
+  （2）可以通过tsconfig.json配置文件运行  
+  - tsc --init
+  - 修改配置文件
+  ```
+  "outDir": "./dist",
+  "rootDir": "./src"
+  ```
+  - 启动 
+  ```
+  tsc --watch
+  ```
+
