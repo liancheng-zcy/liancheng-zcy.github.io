@@ -3,6 +3,8 @@ layout: post
 color: purple
 title:  "快速构建TS环境"
 date:   2020-02-16 01:54:00
+cover: "../img/bg.jpg"
+tags: TS
 ---
 
 ### 快速构建TS环境。
