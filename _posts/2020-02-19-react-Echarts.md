@@ -15,16 +15,15 @@ npx create-react-app 项目名
 ```
 >2、重新配置
 
-1、
-eject 项目 ,把项目的所有webpack配置暴露出来，但是这个操作时不可逆的。然后就可以进行webpack进行配置了。
-2、
-安装 react-app-rewired 并修改 package.json 里的启动配置。。由于新的 react-app-rewired@2.x 版本的关系，你需要还需要安装 customize-cra。
+1、eject 项目 ,把项目的所有webpack配置暴露出来，但是这个操作时不可逆的。然后就可以进行webpack进行配置了。
+2、安装 react-app-rewired 并修改 package.json 里的启动配置。由于新的 react-app-rewired@2.x 版本的关系，你需要还需要安装 customize-cra。
 > 具体的配置去react-app-rewired和customize-cra 官网查看
 ```
 npm install react-app-rewired customize-cra --save-dev
 ```
-- 修改package.json
-```
+- 修改package.json  
+  
+```javaScript
     "scripts": {
     -   "start": "react-scripts start",
     +   "start": "react-app-rewired start",
