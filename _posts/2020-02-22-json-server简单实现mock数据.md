@@ -6,10 +6,7 @@ date:   2020-02-18 01:54:00
 cover: "../img/bg1.jpg"
 tags: json-server
 ---
-> 1、安装
-```javaScript
-	npm install -g json-server
-```
+
 > 1、安装
 ```javaScript
 	npm install -g json-server
@@ -45,7 +42,9 @@ tags: json-server
     ]
 }
 ```
+
 - 编写mock.js
+- 
 ```javaScript
 const test = require('./test.json')
 module.exports = () =>{
@@ -54,12 +53,18 @@ module.exports = () =>{
   }
 }
 ```
+
 - 可以直接使用命令行，来启动这个json文件
+
+
 ```javaScript
 	json-server ./src/mock/mock.js  -p 9000 --watch
 ```
+
 这里 ./src/mock/mock.js是你的根文件 ，-p 9000是配置端口，--watch是监听变化。
+
 出现这样的提示代表你成功了
+
 ```javaScript
 \{^_^}/ hi!
 
@@ -72,18 +77,25 @@ module.exports = () =>{
   Home
   http://localhost:9000
 ```
+
 - 为了更好的定制你的需求可以添加路由文件进行配置,创建route.json的路由配置文件
+
+
 ```javaScript
 {
   "/ajax/test":"/test"
 }
 ```
 启动
+
 ```javaScript
   json-server ./src/mock/mock.js -r ./src/mock/route.json -p 9000 --watch
 ```
+
  ./src/mock/mock.js -r 是路由配置文件
+
  启动成功：
+
  ```javaScript
  ./src/mock/route.json has changed, reloading...
 
@@ -100,7 +112,9 @@ module.exports = () =>{
   Home
   http://localhost:9000
 ```
+
 最后打开提示路径到浏览器就行
+
 > 常用配置
 ```javaScript
 –config -c 指定配置文件 [默认值: “json-server.json”]
@@ -120,7 +134,9 @@ module.exports = () =>{
 –help -h 显示帮助信息 [布尔]
 –version -v 显示版本号 [布尔]
 ```
+
 还可以把启动命令写到json-server.json配置文件中
+
 ```javaScript
 {
   "port": 3000,
@@ -133,6 +149,7 @@ module.exports = () =>{
 }
 
 ```
+
 启动命令：
 > json-server --watch mock.js  
 
