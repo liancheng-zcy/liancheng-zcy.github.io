@@ -247,6 +247,12 @@ article {
 
 .post-excerpt {
     font-size: 16px;
+    letter-spacing: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;  /*要显示的行数*/
+    -webkit-box-orient: vertical
 }
 .post-tag {
     background-color: mui-color('indigo','400');
