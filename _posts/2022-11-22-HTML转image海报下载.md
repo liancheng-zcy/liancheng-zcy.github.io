@@ -45,7 +45,7 @@ const contentHeight = useMemo(() => { 
 
 ### [](https://note.youdao.com/md/#%E4%BA%8C-%E6%B5%B7%E6%8A%A5%E4%B8%8B%E8%BD%BD)二、海报下载
 
-> 海报下载是html -> image的过程。\
+> 海报下载是html -> image的过程。
 > ***（1）怎么拿到真实的节点，拿到真的比例***
 
 ```
@@ -119,5 +119,3 @@ document.body.removeChild(link)
 document.body.removeChild(newDom) //移除克隆的节点
 ```
 
-
-如有更好的方案，多多交流。主要更多的问题还是下载的样式问题。
