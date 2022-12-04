@@ -10,18 +10,32 @@ tags: h5海报
 
 ## 基本原则
 1、单一职责原则 (Single Responsibility Principle) 
+
 2、开放-关闭原则 (Open-Closed Principle)  
+
   开放-关闭原则表示软件实体 (类、模块、函数等等) 应该是可以被扩展的，但是不可被修改。(Open for extension, close for modification)
+  
   如果一个软件能够满足 OCP 原则，那么它将有两项优点：
+  
 - (1)能够扩展已存在的系统，能够提供新的功能满足新的需求，因此该软件有着很强的适应性和灵活性。
+- 
 - (2)已存在的模块，特别是那些重要的抽象模块，不需要被修改，那么该软件就有很强的稳定性和持久性。
+
 3、里氏替换原则 (Liskov Substitution Principle) 里氏替换原则的重点在不影响原功能，而不是不覆盖原方法
+
 4、依赖倒转原则 (Dependence Inversion Principle) 依赖倒转原则的核心思想就是面向接口编程, 高层模块不应该依赖底层模块，二者都应该抽象
+
 5、接口隔离原则 (Interface Segregation Principle) 接口分离，不实现多余的方法
+
 6、迪米特法则（Law Of Demeter） 只与直接类进行通信
+
 7组合/聚合复用原则 (Composite/Aggregate Reuse Principle)
+
 
 ## 参看文献
 https://zhuanlan.zhihu.com/p/24614363 
+
 https://overreacted.io/writing-resilient-components/ Dan 神写的
+
 https://dev.to/shadid12/why-apply-open-closed-principles-in-react-component-composition-26p1
+
