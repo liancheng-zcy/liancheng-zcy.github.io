@@ -28,7 +28,7 @@ const contentHeight = useMemo(() => { 
 // 2、获取海报得缩放比例（海报预览组件）
 // props.height 就是 contentHeight
 
-<div
+<!-- <div
     style={{
       transform: `scale(${props.height / 2750})`,
     }}
@@ -41,7 +41,7 @@ const contentHeight = useMemo(() => { 
         backgroundImage={props.backgroundImage}
         config={baseInfo}
     />
-</div>
+</div> -->
 
 ```
 
