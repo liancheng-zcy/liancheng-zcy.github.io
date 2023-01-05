@@ -4,7 +4,7 @@ title: 扎扎小成的博客
 email: lianchenglac@163.com
 description: "只有代码能引起我的兴趣，做一名极客！！"
 keywords: "前端、React、Vue、大前端、工程化、人生思考"
-#url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
+url: "https://lianchenglac.top" # the base hostname & protocol for your site
 #url: "http://bitwiser.in/bitwiser-material" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 paginate: 5
