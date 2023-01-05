@@ -26,11 +26,12 @@ const contentHeight = useMemo(() => { 
   }, [marginTop, marginBottom])
 
 // 2、获取海报得缩放比例（海报预览组件）
+// props.height 就是 contentHeight
 
 <div
     style={{
       transform: `scale(${props.height / 2750})`,
-    }} // props.height 就是 contentHeight
+    }}
     className={`${cls({ element: "inner" })} ${`poster_${props.id}`}`}
     id={props.id}
 >
@@ -41,6 +42,7 @@ const contentHeight = useMemo(() => { 
         config={baseInfo}
     />
 </div>
+
 ```
 
 ### [](https://note.youdao.com/md/#%E4%BA%8C-%E6%B5%B7%E6%8A%A5%E4%B8%8B%E8%BD%BD)二、海报下载
